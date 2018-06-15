@@ -36,5 +36,30 @@ Note: from MASTER to STAGE
 Note: delete file from STAGE; to also delete from MASTER, use git commit
 
 12. git remote add origin git@github.com:izff/learngit.git
+Note: name of remote is ORIGIN, can be changed
 
 13. git push -u origin master
+Note: initial push, from MASTER to remote ORIGIN
+the -u means associating remote MASTER with local MASTER
+can be omitted for later pushes
+
+14. git pull origin master
+Note: from remote ORIGIN to MASTER
+
+15. git clone git@github.com:USERNAME/REPOS.git
+
+16. git checkout -b dev
+== git branch dev && git checkout dev
+Note: create new branch and switch to it
+
+17. git checkout master
+Note: check back to MASTER
+
+18. git merge dev
+Note: merge dev to current MASTER
+
+19. git branch -d dev
+Note: delete branch dev
+
+20. git branch
+show all branches
