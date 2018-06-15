@@ -7,6 +7,7 @@ Basic commands:
 2. git commit -m "..."
 
 3. git diff <filename>
+Note: compare CURRENT and STAGE
 
 4. git status
 
@@ -23,4 +24,10 @@ CURRENT to STAGE    : git add
 STAGE to MASTER     : git commit
 
 8. git diff HEAD -- <filename>
-Note: check differences between CURRENT and MASTER(HEAD)
+Note: compare CURRENT and MASTER(HEAD)
+
+9. git checkout -- <filename>
+Note: from STAGE to CURRENT
+
+10. git reset HEAD <filename>
+Note: from MASTER to STAGE
