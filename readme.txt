@@ -31,3 +31,6 @@ Note: from STAGE to CURRENT
 
 10. git reset HEAD <filename>
 Note: from MASTER to STAGE
+
+11. git rm <filename>
+Note: delete file from STAGE; to also delete from MASTER, use git commit
