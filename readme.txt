@@ -34,3 +34,7 @@ Note: from MASTER to STAGE
 
 11. git rm <filename>
 Note: delete file from STAGE; to also delete from MASTER, use git commit
+
+12. git remote add origin git@github.com:izff/learngit.git
+
+13. git push -u origin master
