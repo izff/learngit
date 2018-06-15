@@ -6,3 +6,7 @@ Basic commands:
 2. git commit -m "..."
 3. git diff <filename>
 4. git status
+
+Intermediate:
+travel through time, back to old commits
+5. git log
