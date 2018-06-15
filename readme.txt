@@ -18,3 +18,9 @@ travel through time, back to old commits
 Note: HEAD means the nearest one commit; HEAD^ means one commit back
 
 7. git reflog
+
+CURRENT to STAGE    : git add
+STAGE to MASTER     : git commit
+
+8. git diff HEAD -- <filename>
+Note: check differences between CURRENT and MASTER(HEAD)
