@@ -74,3 +74,4 @@ Details: branch dev is from master; if they are modified the same file,
     try to merge the two branched, conflicts may occur.
 
 22. git log --graph --pretty=oneline --abbrev-commit
+    git log : the full detail
