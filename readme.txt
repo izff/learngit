@@ -75,3 +75,82 @@ Details: branch dev is from master; if they are modified the same file,
 
 22. git log --graph --pretty=oneline --abbrev-commit
     git log : the full detail
+
+23. git merge --no-ff -m <commit message> dev
+Note: diable fast-forward merge method
+    branch management: all workers work on their own branch
+                       they commit only to dev
+                       only dev commit to master
+
+24. git checkout dev (We are working on dev in the beginning)
+    git stash        (after some work, we save the workspace)
+Note: save CURRENT temporarily, and then we checkout master;
+    so that we can change our focus on something more urgent.
+    git checkout master
+    <some other work, fix bugs or so>
+    git checkout dev (get back to work on branch dev)
+    git stash list   (list stashes)
+    git stash pop    (reload stash and delete saved stash entry)
+
+25. git stash apply && git stash drop
+    git stash apply stash@{0} (choose the stash to apply)
+
+26. to develop a new feature: we'd better create a new branch
+    and to delete a branch that has never been merged:
+    git branch -D <branch>
+
+27. git remote
+Note: show remote repository designation name, which is usually ORIGIN
+    git push origin master
+    git push origin dev     (push other branches to remote)
+
+28. git checkout -b dev origin/dev
+
+    git add <filename>
+    git commit -m 'modify dev branch'
+    git push origin dev
+    > error: failed to push some refs to <remote>
+    > this means remote dev conflicts our local dev branch
+    > we need to pull remote to local, fix on local machine, then push
+
+    git pull <remote> <branch>
+    > but before we pull, we need to link local branch to remote one
+    git branch --set-upstream-to=origin/dev dev
+    git pull
+
+29. git rebase
+Note: migrate all the modifications on one branch to another branch.
+    would change the history of the commit timeline, but would make the
+    timeline neater and cleaner.
+
+Example:
+
+    M1---M2---M3---M4       Master
+         |
+         B1a--B1b--B1c      Branch1
+         |
+         B2a--B2b--B2c      Branch2
+
+=>                 (Master before merge)
+                    |              Branch2(Master after merge)
+                    |              |
+    M1---M2---M3---M4---B2a--B2b--B2c 
+         |
+         B1a--B1b--B1c      Branch1
+
+    git rebase --onto master branch2 branch1
+    git checkout master
+    git merge branch2
+
+    git rebase master branch1
+    git checkout master
+    git merge branch1
+
+    git branch -d branch1
+    git branch -d branch2
+
+30. rule of rebase: 
+    Do not rebase commits that exist outside your repository.
+    another trick, inform everyone to use: 
+        git pull --base
+
