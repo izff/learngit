@@ -59,9 +59,18 @@ Note: check back to MASTER
 
 18. git merge dev
 Note: merge dev to current MASTER
+(Fast-forward: easy merge, no conflicts)
 
 19. git branch -d dev
 Note: delete branch dev
 
 20. git branch
-show all branches
+Note: show all branches
+
+21. git merge <branch>
+Note: automatic merge may fail; need to solve manually.
+Details: branch dev is from master; if they are modified the same file,
+    and have both < git add; git commit -m >; when checkout to master and
+    try to merge the two branched, conflicts may occur.
+
+22. git log --graph --pretty=oneline --abbrev-commit
