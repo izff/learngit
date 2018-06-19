@@ -43,8 +43,11 @@
 	易知：
 	![](figs/confidencelevel-2.png)
 * （2）sigma未知时mu的置信区间
+
 	![](figs/confidencelevel-3.png)
+
 * （3）sigma的置信区间
+	
 	![](figs/confidencelevel-4.png)
 	![](figs/confidencelevel-5.png)
 	
