@@ -34,3 +34,17 @@
 	
 	引用：访问对象的一种方式，可以认为就是内存地址。
 	
+### 生存分析 与 Kaplan-Meier 估算子
+
+### 正态分布的置信区间
+* （1）sigma已知时mu的置信区间
+	mu的点估计为样本x的平均值，分布为 N(<x>, sigma^2/n) (中心极限定理)
+	![](figs/confidencelevel-1.png)
+	易知：
+	![](figs/confidencelevel-2.png)
+* （2）sigma未知时mu的置信区间
+	![](figs/confidencelevel-3.png)
+* （3）sigma的置信区间
+	![](figs/confidencelevel-4.png)
+	![](figs/confidencelevel-5.png)
+	
