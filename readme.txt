@@ -1,6 +1,10 @@
 This is a new repository.
 The main goal of it is to warm up git.
 
+sources:
+--- 1: https://www.liaoxuefeng.com
+--- 2: https://git-scm.com/book/zh/v2/
+
 Basic commands:
 0. git init
 
